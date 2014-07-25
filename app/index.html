@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BaniyafyWeb</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/baniyafy-web.css">
+  </head>
+  <body>
+    <script>
+      window.BaniyafyWebENV = {{ENV}};
+      window.EmberENV = window.BaniyafyWebENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/baniyafy-web.js"></script>
+    <script>
+      window.BaniyafyWeb = require('baniyafy-web/app')['default'].create(BaniyafyWebENV.APP);
+    </script>
+  </body>
+</html>
